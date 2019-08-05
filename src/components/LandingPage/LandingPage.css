@@ -1,0 +1,44 @@
+
+
+h2 {
+	margin: 0;
+  font-size: 24px;
+  padding: 10px;
+  text-align: center;
+}
+
+.landing, .dashboard {
+	background: var(--bg-light);
+	margin: auto 20px;
+	text-align: center;
+  padding: 15px;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.signup {
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+}
+
+
+form {
+    padding-bottom: 20px;
+}
+
+button, img, p {
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+}
+
+
+label {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+
+

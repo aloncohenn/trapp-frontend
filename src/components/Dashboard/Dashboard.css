@@ -1,0 +1,13 @@
+
+.dashboard {
+	background: var(--bg-light);
+	margin: auto 20px;
+	text-align: center;
+  padding: 15px;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+
+
