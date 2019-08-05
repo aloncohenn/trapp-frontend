@@ -3,3 +3,30 @@
   margin: 0;
   padding: 0;
 }
+
+section {
+  width: 50%;
+  margin: 50px auto;
+  padding: 20px;
+  border: 3px solid black;
+}
+
+button {
+  padding: 8px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2376ae;
+  color: #ffffff;
+}
+
+input {
+  margin: 8px;
+  padding: 8px;
+}
+
+.error {
+  color: green;
+}

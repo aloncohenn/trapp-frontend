@@ -1,15 +1,15 @@
 import React from 'react';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faEdit, faTrash, faPlus } from '@fortawesome/free-solid-svg-icons';
-import './App.css';
-
-library.add(faEdit, faTrash, faPlus);
+import Navbar from '../components/Navbar/Navbar';
+import Login from '../components/Login/Login';
+import SignUp from '../components/SignUp/SignUp';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>TrApp</h1>
+        <Navbar />
+        <Login />
+        <SignUp />
       </header>
     </div>
   );
