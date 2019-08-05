@@ -15,7 +15,6 @@ height: 90%;
 
 main {
 min-height: 100%;
-height: auto !important;
 height: 100%;
 margin: 0 auto ;
 }
@@ -66,4 +65,27 @@ input {
   color: green;
 }
 
+
+.signup {
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+}
+
+
+form {
+    padding-bottom: 20px;
+}
+
+button, img, p {
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+}
+
+
+label {
+    display: inline-block;
+    margin-top: 20px;
+}
 
