@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -14,26 +15,20 @@ const Navbar = () => {
       >
         <FontAwesomeIcon icon="bars" color="white" size="lg" />
       </span>
-      <img
+      <Link to="/"><img
         className="logo"
         src="https://via.placeholder.com/60.png?text=TrApp"
         alt="company logo"
-      />
+      /></Link>
       <ul className="main-nav" id={active ? 'active' : null}>
         <li>
-          <a href="#" className="nav-links">
-            Dashboard
-          </a>
+          <Link to="/signup">Sign Up</Link>
         </li>
         <li>
-          <a href="#" className="nav-links">
-            Login
-          </a>
+          <Link to="/login">Log In</Link>
         </li>
         <li>
-          <a href="#" className="nav-links">
-            Signup
-          </a>
+          <Link to="/demo">Demo</Link>
         </li>
       </ul>
     </nav>
