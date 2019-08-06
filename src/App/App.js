@@ -7,6 +7,7 @@ import Login from '../components/Login/Login';
 import SignUp from '../components/SignUp/SignUp';
 import LandingPage from '../components/LandingPage/LandingPage';
 import Dashboard from '../components/Dashboard/Dashboard';
+import JobForm from '../components/JobForm/JobForm'
 import Footer from '../components/Footer/Footer';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/signup" component={SignUp} />
         <Route exact path="/login" component={Login} />
         <Route path="/dashboard" component={Dashboard} />
+        <Route path="/postjob" component={JobForm} />
       </Switch>
       <Footer />
     </div>

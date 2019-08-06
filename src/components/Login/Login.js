@@ -20,7 +20,8 @@ const Login = () => {
       } else {
         username.value = '';
         password.value = '';
-        TokenService.saveAuthToken(res.authToken);
+        console.log(res)
+        TokenService.saveAuthToken(res.data.authToken);
         console.log('response is: ', res);
         console.log('user logged in!', TokenService.getAuthToken());
       }
