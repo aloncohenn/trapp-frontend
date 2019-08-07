@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Dashboard.css';
 import JobApiService from '../../services/JobApiService';
 import JobCard from '../../components/JobCard/JobCard';
+import './Dashboard.css'
 
 
 class Dashboard extends Component {

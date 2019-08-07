@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './JobCard.css'
 
 class JobCard extends Component {
 
@@ -10,14 +11,19 @@ class JobCard extends Component {
   //   dateApplied: this.props.dateApplied
   // }
 
+
+
+
+
   render() {
+
     return (
-      <div class="job">
-        <h2>{this.props.position}</h2>
+      <div className="job">
+        <h3>{this.props.position}</h3>
         <ul>
           <li><strong>Company Name:</strong> {this.props.companyName}</li>
           <li><strong>Category</strong> {this.props.category}</li>
-          <li><strong>Date Applied:</strong> {this.props.dateApplied}</li>
+          <li><strong>Date Applied:</strong> {this.props.dateApplied.split("T")[0]}</li>
         </ul>
       </div>
 
