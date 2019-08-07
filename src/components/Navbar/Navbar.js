@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react';
-import TokenService from '../../services/TokenService';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Navbar.css';
 import { Link } from 'react-router-dom';

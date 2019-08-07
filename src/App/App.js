@@ -12,7 +12,7 @@ import JobForm from '../components/JobForm/JobForm';
 import Footer from '../components/Footer/Footer';
 import JobContextProvider from '../contexts/JobContext';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <UserContextProvider>
@@ -30,6 +30,6 @@ function App() {
       </UserContextProvider>
     </div>
   );
-}
+};
 
 export default App;
