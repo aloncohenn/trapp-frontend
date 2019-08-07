@@ -13,7 +13,7 @@ const JobApiService = {
       }
     })
       .then(res => {
-        return res;
+        return res.data;
       })
       .catch(error => {
         return error.response.data;
