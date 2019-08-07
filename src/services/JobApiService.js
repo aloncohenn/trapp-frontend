@@ -1,6 +1,6 @@
 import axios from 'axios';
 import config from '../config';
-import TokenService from './TokenService'
+import TokenService from './TokenService';
 
 const JobApiService = {
   getJobs() {
@@ -9,8 +9,8 @@ const JobApiService = {
       url: `${config.API_ENDPOINT}/jobs`,
       headers: {
         'content-type': 'application/json',
-        'authorization': `bearer ${TokenService.getAuthToken()}`
-      },
+        authorization: `bearer ${TokenService.getAuthToken()}`
+      }
     })
       .then(res => {
         return res;
@@ -21,18 +21,18 @@ const JobApiService = {
   },
 
   postJob({ companyName, position, category }) {
-    console.log(TokenService.getAuthToken())
+    console.log(TokenService.getAuthToken());
     return axios({
       method: 'post',
       url: `${config.API_ENDPOINT}/jobs/newjob`,
       headers: {
         'content-type': 'application/json',
-        'authorization': `${TokenService.getAuthToken()}`
+        authorization: `bearer ${TokenService.getAuthToken()}`
       },
-      data: { 
-        companyName, 
-        position, 
-        category 
+      data: {
+        companyName,
+        position,
+        category
       }
     })
       .then(res => {
@@ -53,7 +53,7 @@ const JobApiService = {
       })
       .catch(error => {
         return error.response.data;
-      })
+      });
   },
 
   editJob({ edits }) {
@@ -62,7 +62,7 @@ const JobApiService = {
       url: `${config.API_ENDPOINT}/jobs/${edits.id}`,
       headers: {
         'content-type': 'application/json',
-        'authorization': `${TokenService.getAuthToken()}`
+        authorization: `${TokenService.getAuthToken()}`
       },
       data: {
         _id: edits.id
@@ -73,7 +73,7 @@ const JobApiService = {
       })
       .catch(error => {
         return error.response.data;
-      })
+      });
   }
 };
 

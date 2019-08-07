@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import AuthApiService from '../../services/AuthApiService';
 import TokenService from '../../services/TokenService';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Emoji from '../Emoji/Emoji';
+import { Redirect } from 'react-router-dom';
+import { UserContext } from '../../contexts/UserContext';
 
 const Login = () => {
+  const { status, dispatch } = useContext(UserContext);
   const [error, setError] = useState(null);
 
   const handleSubmitJwtAuth = e => {
@@ -20,25 +23,22 @@ const Login = () => {
       } else {
         username.value = '';
         password.value = '';
-        console.log(res)
-        TokenService.saveAuthToken(res.data.authToken);
-        console.log('response is: ', res);
-        console.log('user logged in!', TokenService.getAuthToken());
+        const jwt = res.data.authToken.split('bearer ')[1];
+        dispatch({ type: 'TOGGLE_LOGGED_IN', jwt });
       }
     });
   };
 
   const handleDemo = () => {
     AuthApiService.postLogin({
-      username: 'DemoUser',
+      username: 'demoUser',
       password: 'demoAccount@1'
     }).then(res => {
       if (res.error) {
         setError(res.error);
       } else {
-        const jwt = res.data.authToken.split('Bearer ')[1];
-        TokenService.saveAuthToken(jwt);
-        console.log('user logged in!', TokenService.getAuthToken());
+        const jwt = res.data.authToken.split('bearer ')[1];
+        dispatch({ type: 'TOGGLE_LOGGED_IN', jwt });
       }
     });
   };
