@@ -59,6 +59,7 @@
     margin: 0;
   }
   .nav-links {
+    text-decoration: none;
     margin-left: 40px;
   }
   .logo {
