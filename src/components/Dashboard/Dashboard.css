@@ -1,13 +1,8 @@
-
-.dashboard {
-	background: var(--bg-light);
-	margin: auto 20px;
-	text-align: center;
-  padding: 15px;
+.job-list {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  list-style: none;
+  padding-inline-start: 0;
+  margin: 0 auto;
 }
-
-
-

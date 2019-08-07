@@ -43,10 +43,14 @@ const JobApiService = {
       });
   },
 
-  deleteJob({ id }) {
+  deleteJob(id) {
     return axios({
       method: 'delete',
-      url: `${config.API_ENDPOINT}/jobs/${id}`
+      url: `${config.API_ENDPOINT}/jobs/${id}`,
+      headers: {
+        'content-type': 'application/json',
+        authorization: `bearer ${TokenService.getAuthToken()}`
+      }
     })
       .then(res => {
         return res;

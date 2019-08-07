@@ -1,21 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { JobContext } from '../../contexts/JobContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './JobCard.css';
 
 const JobCard = props => {
+  const { deleteJob } = useContext(JobContext);
   return (
-    <div class="job">
-      <h2>{props.position}</h2>
-      <ul>
-        <li>
-          <strong>Company Name:</strong> {props.companyName}
-        </li>
-        <li>
-          <strong>Category</strong> {props.category}
-        </li>
-        <li>
-          <strong>Date Applied:</strong> {props.dateApplied}
-        </li>
-      </ul>
-    </div>
+    <li className="job-card">
+      <h2>{props.companyName}</h2>
+      <p>
+        <span>{props.position}</span>
+      </p>
+      <button onClick={() => deleteJob(props.id)} className="delete-btn">
+        <FontAwesomeIcon icon="trash-alt" color="black" size="lg" />
+      </button>
+    </li>
   );
 };
 
