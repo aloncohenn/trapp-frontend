@@ -77,7 +77,7 @@ const Login = () => {
           />
         </div>
         <button type="submit">Log In</button>
-        <input type="button" onClick={handleDemo} value="Demo" />
+        <input type="button" className="button" onClick={handleDemo} value="Demo" />
       </form>
     </section>
   );
