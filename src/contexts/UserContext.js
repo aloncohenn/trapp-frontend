@@ -1,13 +1,26 @@
-import React, { createContext, useReducer, useState } from 'react';
-import { userReducer } from '../reducers/UserReducer';
+import React, { createContext, useState } from 'react';
+import TokenService from '../services/TokenService';
 
 export const UserContext = createContext();
 
 const UserContextProvider = props => {
-  const [status, dispatch] = useReducer(userReducer, { loggedIn: false });
+  const [status, setStatus] = useState(TokenService.hasAuthToken());
+
+  const handleLogOut = () => {
+    TokenService.clearAuthToken();
+    setStatus(false);
+  };
+
+  const handleLogIn = (jwt, redirect) => {
+    TokenService.saveAuthToken(jwt);
+    setStatus(true);
+    redirect();
+  };
 
   return (
-    <UserContext.Provider value={{ status, dispatch }}>
+    <UserContext.Provider
+      value={{ handleLogOut, handleLogIn, status, setStatus }}
+    >
       {props.children}
     </UserContext.Provider>
   );

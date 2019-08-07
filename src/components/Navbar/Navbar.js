@@ -7,11 +7,11 @@ import { UserContext } from '../../contexts/UserContext';
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
-  const { status, dispatch } = useContext(UserContext);
+  const { status, handleLogOut } = useContext(UserContext);
 
   const renderLoggedOutView = () => {
     return (
-      <nav className="navbar">
+      <>
         <span
           className="navbar-toggle"
           id="js-navbar-toggle"
@@ -38,13 +38,13 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-      </nav>
+      </>
     );
   };
 
   const renderLoggedInView = () => {
     return (
-      <nav className="navbar">
+      <>
         <span
           className="navbar-toggle"
           id="js-navbar-toggle"
@@ -66,29 +66,25 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/login" className="nav-links">
+            <Link to="/newjob" className="nav-links">
               New Job
             </Link>
           </li>
           <li>
-            <Link
-              to="/login"
-              className="nav-links"
-              onClick={() => dispatch({ type: 'TOGGLE_LOGGED_OUT' })}
-            >
+            <Link to="/" className="nav-links" onClick={() => handleLogOut()}>
               Logout
             </Link>
           </li>
         </ul>
-      </nav>
+      </>
     );
   };
 
-  if (status) {
-    return renderLoggedInView();
-  } else {
-    return renderLoggedOutView();
-  }
+  return (
+    <nav className="navbar">
+      {status ? renderLoggedInView() : renderLoggedOutView()}
+    </nav>
+  );
 };
 
 export default Navbar;
