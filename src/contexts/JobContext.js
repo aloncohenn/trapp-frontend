@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
 import JobApiService from '../services/JobApiService';
+import moment from 'moment'
 
 export const JobContext = createContext();
 
@@ -26,8 +27,12 @@ const JobContextProvider = props => {
     JobApiService.getJobs().then(jobs => setJobs(jobs));
   };
 
+  const getNow = () => {
+    return moment().format('YYYY-MM-DD')
+  }
+
   return (
-    <JobContext.Provider value={{ jobs, addJob, deleteJob }}>
+    <JobContext.Provider value={{ jobs, addJob, deleteJob, getNow }}>
       {props.children}
     </JobContext.Provider>
   );

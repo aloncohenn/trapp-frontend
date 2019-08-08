@@ -1,0 +1,38 @@
+.segmented-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.segmented-control__item {
+  list-style-type: none;
+}
+
+.segmented-control__input {
+  position: absolute;
+  opacity: 0;
+}
+
+.segmented-control__label {
+  border-radius: 5px;
+  padding: 10px 25px;
+  display: block;
+  border: 1px solid #555;
+  text-align: center;  
+}
+
+.segmented-control__label:hover {
+  opacity: 50%;
+  background: #344e5c;
+  color: #efc958; 
+}
+
+.segmented-control__input:focus + .segmented-control__label {
+  outline: 1px solid #4ab19d;
+}
+
+
+.segmented-control__input:checked + .segmented-control__label {
+  background: #4ab19d;
+  color: #fff; 
+}
