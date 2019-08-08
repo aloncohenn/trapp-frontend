@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const techStackArray = (text) => {
-  return text.split(',')
+  return text.split(',').map(item => item.trim());
 }
 
 export const SegmentControl = () => {

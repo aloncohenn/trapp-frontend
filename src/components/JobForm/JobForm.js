@@ -14,16 +14,18 @@ const JobForm = props => {
 
   const handleSubmitJob = e => {
     e.preventDefault();
-    const { company_name, position, category, tech_stack, date_applied } = e.target;
+    const { company_name, position, category, tech_stack, date_applied, job_posting, notes } = e.target;
     const stack = techStackArray(tech_stack.value)
     return setError(
       addJob(
         {
           companyName: company_name.value,
+          jobPosting: job_posting.value,
           position: position.value,
           category: category.value,
           techStack: stack,
-          date_applied: date_applied.value
+          date_applied: date_applied.value,
+          notes: notes.value
         },
         redirect
       )
@@ -32,7 +34,7 @@ const JobForm = props => {
 
   return (
     <section>
-      <h1>Post Job</h1>
+      <h1>Add Job</h1>
       <form className="post-job-form" onSubmit={handleSubmitJob}>
         <div role="alert">
           {error && (
@@ -51,6 +53,15 @@ const JobForm = props => {
             name="company_name"
             id="company_name"
             placeholder="Apple"
+          />
+        </div>
+        <div>
+          <label htmlFor="job_posting">Job Posting</label>
+          <input
+            type="text"
+            name="job_posting"
+            id="job_posting"
+            placeholder="http://linkedin.com"
           />
         </div>
         <div>
@@ -75,10 +86,20 @@ const JobForm = props => {
         <div>
           <label htmlFor="tech_stack">Technologies</label>
           <input
-            type="form"
+            type="text"
             name="tech_stack"
             id="tech_stack"
             placeholder="React, Node, Angular, etc."
+          />
+        </div>
+        <div>
+          <label htmlFor="notes">Notes</label>
+          <input
+            type="textarea"
+            name="notes"
+            id="notes"
+            placeholder="Notes about this position"
+            size="40"
           />
         </div>
         <button type="submit">Submit</button>
