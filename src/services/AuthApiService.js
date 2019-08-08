@@ -24,8 +24,6 @@ const AuthApiService = {
   },
 
   postLogin({ username, password }) {
-    console.log('username is: ', username);
-    console.log('password is: ', password);
     return axios({
       method: 'post',
       url: `${config.API_ENDPOINT}/auth`,

@@ -20,8 +20,8 @@ const JobApiService = {
       });
   },
 
-  postJob({ companyName, position, category }) {
-    console.log(TokenService.getAuthToken());
+  postJob(job) {
+    console.log(job);
     return axios({
       method: 'post',
       url: `${config.API_ENDPOINT}/jobs/newjob`,
@@ -29,11 +29,7 @@ const JobApiService = {
         'content-type': 'application/json',
         authorization: `bearer ${TokenService.getAuthToken()}`
       },
-      data: {
-        companyName,
-        position,
-        category
-      }
+      data: job
     })
       .then(res => {
         return res;
