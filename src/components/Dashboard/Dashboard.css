@@ -1,18 +1,10 @@
-/* 
-.dashboard {
-	background: var(--bg-light);
-	margin: auto 20px;
-	text-align: center;
-  padding: 15px;
+.job-list {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-} */
-
-h2 {
-  
-  color: #344e5c 
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  list-style: none;
 }
 
-
-
+.category-list {
+  list-style: none;
+}

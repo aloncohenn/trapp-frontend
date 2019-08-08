@@ -7,15 +7,15 @@ import { BrowserRouter } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faEdit,
-  faTrash,
   faPlus,
   faKey,
   faEnvelope,
   faUser,
-  faBars
+  faBars,
+  faTrashAlt
 } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faKey, faEnvelope, faUser, faEdit, faTrash, faPlus, faBars);
+library.add(faKey, faEnvelope, faUser, faEdit, faPlus, faBars, faTrashAlt);
 
 ReactDOM.render(
   <BrowserRouter>
@@ -23,6 +23,5 @@ ReactDOM.render(
   </BrowserRouter>,
   document.getElementById('root')
 );
-
 
 serviceWorker.unregister();

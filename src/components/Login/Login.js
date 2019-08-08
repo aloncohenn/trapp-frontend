@@ -1,14 +1,16 @@
 import React, { useState, useContext } from 'react';
 import AuthApiService from '../../services/AuthApiService';
-import TokenService from '../../services/TokenService';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Emoji from '../Emoji/Emoji';
-import { Redirect } from 'react-router-dom';
 import { UserContext } from '../../contexts/UserContext';
 
-const Login = () => {
-  const { status, dispatch } = useContext(UserContext);
+const Login = props => {
+  const { handleLogIn } = useContext(UserContext);
   const [error, setError] = useState(null);
+
+  const redirect = () => {
+    props.history.replace('/dashboard');
+  };
 
   const handleSubmitJwtAuth = e => {
     e.preventDefault();
@@ -24,7 +26,7 @@ const Login = () => {
         username.value = '';
         password.value = '';
         const jwt = res.data.authToken.split('bearer ')[1];
-        dispatch({ type: 'TOGGLE_LOGGED_IN', jwt });
+        handleLogIn(jwt, redirect);
       }
     });
   };
@@ -38,7 +40,7 @@ const Login = () => {
         setError(res.error);
       } else {
         const jwt = res.data.authToken.split('bearer ')[1];
-        dispatch({ type: 'TOGGLE_LOGGED_IN', jwt });
+        handleLogIn(jwt, redirect);
       }
     });
   };
