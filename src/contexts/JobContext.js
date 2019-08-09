@@ -1,6 +1,7 @@
 import React, { createContext, useState, useEffect } from 'react';
 import JobApiService from '../services/JobApiService';
 import moment from 'moment'
+import TokenService from '../services/TokenService';
 
 export const JobContext = createContext();
 
@@ -8,8 +9,14 @@ const JobContextProvider = props => {
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
-    JobApiService.getJobs().then(jobs => setJobs(jobs));
+    if (TokenService.hasAuthToken()){ 
+      getJobs();
+    }
   }, []);
+
+  const getJobs = () => {
+    JobApiService.getJobs().then(jobs => setJobs(jobs));
+  }
 
   const addJob = (jobData, redirect) => {
     JobApiService.postJob(jobData).then(res => {
@@ -32,7 +39,7 @@ const JobContextProvider = props => {
   }
 
   return (
-    <JobContext.Provider value={{ jobs, addJob, deleteJob, getNow }}>
+    <JobContext.Provider value={{ jobs, addJob, deleteJob, getNow, getJobs }}>
       {props.children}
     </JobContext.Provider>
   );

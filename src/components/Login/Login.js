@@ -3,9 +3,11 @@ import AuthApiService from '../../services/AuthApiService';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Emoji from '../Emoji/Emoji';
 import { UserContext } from '../../contexts/UserContext';
+import { JobContext } from '../../contexts/JobContext';
 
 const Login = props => {
   const { handleLogIn } = useContext(UserContext);
+  const { getJobs } = useContext(JobContext);
   const [error, setError] = useState(null);
 
   const redirect = () => {
@@ -27,6 +29,7 @@ const Login = props => {
         password.value = '';
         const jwt = res.data.authToken.split('bearer ')[1];
         handleLogIn(jwt, redirect);
+        getJobs();
       }
     });
   };
@@ -41,6 +44,7 @@ const Login = props => {
       } else {
         const jwt = res.data.authToken.split('bearer ')[1];
         handleLogIn(jwt, redirect);
+        getJobs();
       }
     });
   };
