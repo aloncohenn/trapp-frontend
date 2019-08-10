@@ -17,7 +17,8 @@ const isChecked = (inputVal, category) => {
 }
 
 export const SegmentControl = (props) => {
-  return <ul className="segmented-control">
+  return <div>
+    <ul className="segmented-control">
     <li className="segmented-control__item">
         <input className="segmented-control__input" type="radio" value="wishlist" name="category" id="wishlist" defaultChecked={isChecked('wishlist', props.category)}/>
         <label className="segmented-control__label left" htmlFor="wishlist">Wishlist</label>
@@ -39,4 +40,5 @@ export const SegmentControl = (props) => {
         <label className="segmented-control__label right" htmlFor="rejected">Rejected</label>
     </li>
   </ul>
+  </div>
 }
