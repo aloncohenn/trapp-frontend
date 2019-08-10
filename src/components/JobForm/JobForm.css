@@ -36,3 +36,15 @@
   background: #4ab19d;
   color: #fff; 
 }
+
+
+.addFormButton {
+  padding: 8px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.addFormButton:hover {
+  background-color: #344e5c;
+  color: #efc958;
+}

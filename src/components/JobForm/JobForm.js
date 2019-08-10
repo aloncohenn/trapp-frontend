@@ -102,7 +102,7 @@ const JobForm = props => {
             size="40"
           />
         </div>
-        <button type="submit">Submit</button>
+        <button class="addFormButton" type="submit">Submit</button>
       </form>
     </section>
   );

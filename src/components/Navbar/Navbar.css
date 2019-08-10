@@ -7,8 +7,7 @@
 .main-nav {
   list-style-type: none;
 }
-.nav-links,
-.logo {
+.nav-links {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.7);
 }
@@ -17,12 +16,7 @@
   text-align: center;
   margin: 15px auto;
 }
-.logo {
-  display: inline-block;
-  font-size: 22px;
-  margin-top: 10px;
-  margin-left: 20px;
-}
+
 
 .navbar-toggle {
   position: absolute;
@@ -40,6 +34,16 @@
 #active {
   display: block;
 }
+
+.logo {
+    height: auto;
+    width: auto;
+    max-height: 72px;
+    max-width: 250px;
+    border-radius: 10px;
+}
+
+
 
 @media screen and (min-width: 768px) {
   .navbar {
@@ -62,9 +66,7 @@
     text-decoration: none;
     margin-left: 40px;
   }
-  .logo {
-    margin-top: 0;
-  }
+ 
   .navbar-toggle {
     display: none;
   }

@@ -6,7 +6,7 @@ import JobCard from '../JobCard/JobCard';
 const Dashboard = (props) => {
   const { jobs } = useContext(JobContext);
 
-  let columns = ['WISHLIST', 'APPLIED', 'INTERVIEW', 'OFFER', 'REJECTED'];
+  let columns = ['Wishlist', 'Applied', 'Interview', 'Offer', 'Rejected'];
 
   let jobList = columns.map(column => {
     return (

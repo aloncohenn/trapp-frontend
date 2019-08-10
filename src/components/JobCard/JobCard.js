@@ -16,11 +16,11 @@ const JobCard = props => {
       <p>
         <span>{props.position}</span>
       </p>
-      <button onClick={() => redirectToEdit()} className="edit-btn">
-        <FontAwesomeIcon icon="edit" color="black" size="lg" />
+      <button onClick={() => redirectToEdit()} className="dashboardButton">
+        <FontAwesomeIcon icon="edit" size="lg" />
       </button>
-      <button onClick={() => deleteJob(props.id)} className="delete-btn">
-        <FontAwesomeIcon icon="trash-alt" color="black" size="lg" />
+      <button onClick={() => deleteJob(props.id)} className="dashboardButton">
+        <FontAwesomeIcon icon="trash-alt" size="lg" />
       </button>
     </li>
   );

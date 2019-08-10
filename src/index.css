@@ -39,18 +39,7 @@ section {
   text-align: center;
 }
 
-button,
-.button {
-  padding: 8px;
-  margin: 10px;
-  cursor: pointer;
-}
 
-button:hover,
-.button:hover {
-  background-color: #344e5c;
-  color: #efc958;
-}
 
 input {
   margin: 8px;
@@ -65,8 +54,7 @@ form {
   padding-bottom: 20px;
 }
 
-button, .button,
-img,
+button, 
 p {
   padding: 5px;
   margin: 5px;

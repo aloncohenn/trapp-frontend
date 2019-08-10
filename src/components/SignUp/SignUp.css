@@ -1,0 +1,12 @@
+
+.signupButton {
+  padding: 8px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+
+.signupButton:hover {
+  background-color: #344e5c;
+  color: #efc958;
+}
