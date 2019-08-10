@@ -4,6 +4,7 @@ import './Navbar.css';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../contexts/UserContext';
 
+
 const Navbar = () => {
   const [active, setActive] = useState(false);
   const { status, handleLogOut } = useContext(UserContext);
@@ -19,11 +20,7 @@ const Navbar = () => {
           <FontAwesomeIcon icon="bars" color="white" size="lg" />
         </span>
         <Link to="/">
-          <img
-            className="logo"
-            src="https://via.placeholder.com/60.png?text=TrApp"
-            alt="company logo"
-          />
+          logo
         </Link>
         <ul className="main-nav" id={active ? 'active' : null}>
           <li>

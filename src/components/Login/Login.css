@@ -1,0 +1,12 @@
+
+.loginButton {
+  padding: 8px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+
+.loginButton:hover {
+  background-color: #344e5c;
+  color: #efc958;
+}

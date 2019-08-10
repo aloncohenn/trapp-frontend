@@ -3,6 +3,7 @@ import AuthApiService from '../../services/AuthApiService';
 import useSignUpForm from './useSignUpForm';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Emoji from '../Emoji/Emoji';
+import './SignUp.css'
 
 const SignUp = () => {
   const [error, setError] = useState('');
@@ -75,7 +76,7 @@ const SignUp = () => {
             required
           />
         </div>
-        <button type="submit">Log In</button>
+        <button type="submit" class="signupButton">Log In</button>
       </form>
     </section>
   );
