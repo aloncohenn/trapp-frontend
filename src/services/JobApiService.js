@@ -56,17 +56,15 @@ const JobApiService = {
       });
   },
 
-  editJob({ edits }) {
+  editJob(edits) {
     return axios({
       method: 'patch',
-      url: `${config.API_ENDPOINT}/jobs/${edits.id}`,
+      url: `${config.API_ENDPOINT}/jobs/editjob`,
       headers: {
         'content-type': 'application/json',
         authorization: `${TokenService.getAuthToken()}`
       },
-      data: {
-        _id: edits.id
-      }
+      data: edits
     })
       .then(res => {
         return res;
