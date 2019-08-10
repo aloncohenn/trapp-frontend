@@ -3,7 +3,7 @@ import { JobContext } from '../../contexts/JobContext';
 import './Dashboard.css';
 import JobCard from '../JobCard/JobCard';
 
-const Dashboard = () => {
+const Dashboard = (props) => {
   const { jobs } = useContext(JobContext);
 
   let columns = ['WISHLIST', 'APPLIED', 'INTERVIEW', 'OFFER', 'REJECTED'];
@@ -23,6 +23,8 @@ const Dashboard = () => {
                 dateApplied={job.dateApplied}
                 id={job._id}
                 key={job._id}
+
+                {...props}
               />
             );
           })}
