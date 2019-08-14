@@ -1,10 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { JobContext } from '../../contexts/JobContext';
 import './Dashboard.css';
 import JobCard from '../JobCard/JobCard';
 
 const Dashboard = (props) => {
-  const { jobs } = useContext(JobContext);
+  const { jobs, getJobs } = useContext(JobContext);
+
+  useEffect(() => {
+    getJobs();
+  })
 
   let columns = ['Wishlist', 'Applied', 'Interview', 'Offer', 'Rejected'];
 

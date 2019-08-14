@@ -20,6 +20,23 @@ const JobApiService = {
       });
   },
 
+  getJobById(id) {
+    return axios({
+      method: 'get',
+      url: `${config.API_ENDPOINT}/jobs/${id}`,
+      headers: {
+        'content-type': 'application/json',
+        authorization: `bearer ${TokenService.getAuthToken()}`
+      }
+    })
+      .then(res => {
+        return res.data;
+      })
+      .catch(error => {
+        return error.response.data;
+      });
+  },
+
   postJob(job) {
     console.log(job);
     return axios({
@@ -59,7 +76,7 @@ const JobApiService = {
   editJob(edits) {
     return axios({
       method: 'patch',
-      url: `${config.API_ENDPOINT}/jobs/editjob`,
+      url: `${config.API_ENDPOINT}/jobs/${edits._id}`,
       headers: {
         'content-type': 'application/json',
         authorization: `${TokenService.getAuthToken()}`
