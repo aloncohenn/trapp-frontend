@@ -44,6 +44,25 @@
   cursor: pointer;
 }
 
+p {
+  color:  #344e5c;
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  border-radius: 50%;
+  border: 1px solid #4ab19d;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post-job-form {
+  text-align: center;
+}
+
+
+
 .addFormButton:hover {
   background-color: #344e5c;
   color: #efc958;

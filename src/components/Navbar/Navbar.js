@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../contexts/UserContext';
+import logo from '../../assets/logo.png'
 
 
 const Navbar = () => {
@@ -20,7 +21,11 @@ const Navbar = () => {
           <FontAwesomeIcon icon="bars" color="white" size="lg" />
         </span>
         <Link to="/">
-          logo
+          <img
+            className="logo"
+            src={logo}
+            alt="company logo"
+          />
         </Link>
         <ul className="main-nav" id={active ? 'active' : null}>
           <li>
@@ -51,7 +56,7 @@ const Navbar = () => {
         <Link to="/">
           <img
             className="logo"
-            src="https://via.placeholder.com/60.png?text=TrApp"
+            src={logo}
             alt="company logo"
           />
         </Link>

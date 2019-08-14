@@ -13,6 +13,10 @@
   outline: inherit;
 }
 
+p {
+  display: block
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -23,6 +27,8 @@ ul {
 .dashboardButton:hover {
   color: #efc958
 }
+
+
 
 h2{   text-shadow:  
       1px -1px 0 #efc958 }

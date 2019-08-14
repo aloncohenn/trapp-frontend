@@ -23,6 +23,7 @@ const Dashboard = (props) => {
                 dateApplied={job.dateApplied}
                 id={job._id}
                 key={job._id}
+                logo={job.logo}
 
                 {...props}
               />
