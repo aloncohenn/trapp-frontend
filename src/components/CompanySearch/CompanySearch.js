@@ -35,14 +35,14 @@ const CompanySearch = (props) => {
 
   return (
     <div>
-      <label htmlFor="company_name">Company</label>
+      <label htmlFor="company_name" className="company_name">Company</label>
       <input
         type="text"
         name="company_name"
         id="company_name"
         placeholder="Apple"
         onChange={handleChange}
-        />
+      />
       <CompanyList companies={list} />
     </div>
   )
