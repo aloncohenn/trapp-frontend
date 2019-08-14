@@ -4,12 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './JobCard.css';
 import Company from '../Company/Company'
 
-const CompanyLogo = (props) => {
 
-  return props.companies.map(company => {
-    return <Company key={company.name} name={company.name} logo={company.logo} />
-  })
-}
 
 const JobCard = props => {
   const { deleteJob } = useContext(JobContext);
@@ -22,7 +17,7 @@ const JobCard = props => {
     <li className="job-card">
       <h2>{props.companyName}</h2>
       <p>  {props.position}   </p>
-      {CompanyLogo}
+     
       <button onClick={() => redirectToEdit()} className="dashboardButton">
         <FontAwesomeIcon icon="edit" size="lg" />
       </button>
