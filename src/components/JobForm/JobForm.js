@@ -3,6 +3,7 @@ import Emoji from '../Emoji/Emoji';
 import './JobForm.css';
 import { JobContext } from '../../contexts/JobContext';
 import { techStackArray, SegmentControl } from '../../utils/Helpers';
+import CompanySearch from '../CompanySearch/CompanySearch'
 
 const JobForm = props => {
   const [error, setError] = useState(null);
@@ -43,18 +44,8 @@ const JobForm = props => {
             </p>
           )}
         </div>{' '}
-        <div>
-          <SegmentControl />
-        </div>
-        <div>
-          <label htmlFor="company_name">Company</label>
-          <input
-            type="text"
-            name="company_name"
-            id="company_name"
-            placeholder="Apple"
-          />
-        </div>
+        <SegmentControl />
+        <CompanySearch />
         <div>
           <label htmlFor="job_posting">Job Posting</label>
           <input

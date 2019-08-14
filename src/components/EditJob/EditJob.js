@@ -9,7 +9,7 @@ const EditJob = (props) => {
   const job_id = props.match.params.id
   const [error, setError] = useState(null);
   const { getNow, jobs } = useContext(JobContext);
-
+  console.log('jobs is', jobs);
   const jobData = jobs.find(job => job._id === job_id);
 
   const handleSubmitJob = e => {
