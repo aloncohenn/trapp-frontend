@@ -1,11 +1,13 @@
 import React from 'react';
-import Company from '../Company/Company'
-import './CompanyList.css'
+import Company from '../Company/Company';
+import './CompanyList.css';
 
-const CompanyList = (props) => {
+const CompanyList = props => {
   return props.companies.map(company => {
-    return <Company key={company.name} name={company.name} logo={company.logo} />
-  })
-}
+    return (
+      <Company key={company.name} name={company.name} logo={company.logo} />
+    );
+  });
+};
 
-export default CompanyList
+export default CompanyList;

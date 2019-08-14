@@ -1,14 +1,10 @@
 import React, { useContext, useEffect } from 'react';
 import { JobContext } from '../../contexts/JobContext';
-import './Dashboard.css';
 import JobCard from '../JobCard/JobCard';
+import './Dashboard.css';
 
-const Dashboard = (props) => {
-  const { jobs, getJobs } = useContext(JobContext);
-
-  useEffect(() => {
-    getJobs();
-  })
+const Dashboard = props => {
+  const { jobs } = useContext(JobContext);
 
   let columns = ['Wishlist', 'Applied', 'Interview', 'Offer', 'Rejected'];
 
@@ -27,8 +23,6 @@ const Dashboard = (props) => {
                 dateApplied={job.dateApplied}
                 id={job._id}
                 key={job._id}
-                logo={job.logo}
-
                 {...props}
               />
             );
