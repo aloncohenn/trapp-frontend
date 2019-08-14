@@ -50,7 +50,6 @@ p {
 }
 
 img {
-  display: block;
   border-radius: 50%;
   border: 1px solid #4ab19d;
   margin-left: auto;
@@ -59,6 +58,7 @@ img {
 
 .post-job-form {
   text-align: center;
+  
 }
 
 

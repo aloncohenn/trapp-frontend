@@ -7,7 +7,7 @@ import Company from '../Company/Company'
 const CompanyLogo = (props) => {
 
   return props.companies.map(company => {
-    return <Company logo={company.logo} />
+    return <Company key={company.name} name={company.name} logo={company.logo} />
   })
 }
 
