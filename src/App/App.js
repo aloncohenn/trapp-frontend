@@ -12,6 +12,7 @@ import JobForm from '../components/JobForm/JobForm';
 import EditJob from '../components/EditJob/EditJob'
 import Footer from '../components/Footer/Footer';
 import JobContextProvider from '../contexts/JobContext';
+import Study from '../components/Study/Study';
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
             <PrivateRoute path="/dashboard" component={Dashboard} />
             <PrivateRoute path="/newjob" component={JobForm} />
             <PrivateRoute path="/edit/:id" component={EditJob} />
+            <PrivateRoute exact path="/study/:id" component={Study} />
           </Switch>
           <Footer />
         </JobContextProvider>
