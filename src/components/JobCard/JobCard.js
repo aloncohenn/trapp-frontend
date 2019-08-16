@@ -15,18 +15,23 @@ const JobCard = props => {
   };
 
   return (
-    <li className="job-card">
-      <h2>{props.companyName}</h2>
-      <p className="company-title">  {props.position}   </p>
-      <button onClick={() => redirectToStudy()} className="dashboard-button">
-        <FontAwesomeIcon icon="book" size="2x" />
-      </button>
-      <button onClick={() => redirectToEdit()} className="dashboard-button">
-        <FontAwesomeIcon icon="edit" size="2x" />
-      </button>
-      <button onClick={() => deleteJob(props.id)} className="dashboard-button">
-        <FontAwesomeIcon icon="trash-alt" size="2x" />
-      </button>
+    <li className="job-card">  
+      <img src={props.logo} alt={props.companyName} />
+      <div className="job-content">
+        <h2>{props.companyName}</h2>
+        <p className="company-title">  {props.position}   </p>
+        <div>
+          <button onClick={() => redirectToStudy()} className="dashboard-button">
+            <FontAwesomeIcon icon="book" size="2x" />
+          </button>
+          <button onClick={() => redirectToEdit()} className="dashboard-button">
+            <FontAwesomeIcon icon="edit" size="2x" />
+          </button>
+          <button onClick={() => deleteJob(props.id)} className="dashboard-button">
+            <FontAwesomeIcon icon="trash-alt" size="2x" />
+          </button>
+        </div>
+      </div>
     </li>
   );
 };

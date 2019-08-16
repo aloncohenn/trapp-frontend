@@ -30,7 +30,6 @@ const EditJob = props => {
       category,
       date_applied,
       tech_stack,
-      notes,
       job_posting
     } = e.target;
 
@@ -42,8 +41,7 @@ const EditJob = props => {
         position: position.value,
         category: category.value,
         dateApplied: date_applied.value,
-        techStack: tech_stack.value.split(','),
-        notes: notes.value
+        techStack: tech_stack.value.split(',').filter(job => job !== ''),
       })
     );
     setSuccess(true);
@@ -113,17 +111,6 @@ const EditJob = props => {
                 name="tech_stack"
                 id="tech_stack"
                 defaultValue={job.techStack.join(', ')}
-                className="form-input"
-              />
-            </div>
-            <div>
-              <label htmlFor="notes">Notes</label>
-              <input
-                type="textarea"
-                name="notes"
-                id="notes"
-                defaultValue={job.notes}
-                size="40"
                 className="form-input"
               />
             </div>

@@ -44,14 +44,12 @@ const Study = (props) => {
   }
 
   const generateButtons = (techStack) => {
-    console.log(techStack)
-
     if (techStack.length === 0) {
       return <p>No tech added to this job. <Link to={`/edit/${job_id}`}>Edit to add some?</Link></p>
     }
 
-    return techStack.map(tech => {
-      return <button onClick={() => getYouTubeResults(`${tech} study`)}>Study {tech}</button> 
+    return techStack.map((tech, idx) => {
+      return <button onClick={() => getYouTubeResults(`${tech} study`)} key={idx}>Study {tech}</button> 
     })
   }
 

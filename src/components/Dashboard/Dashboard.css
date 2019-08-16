@@ -6,7 +6,8 @@
   list-style: none;
   display: flex;
   width: 100%;
-  /* justify-content: space-around; */
+  overflow-x: scroll;
+  min-height: 80vh;
 }
 
 .job-column {
@@ -14,7 +15,7 @@
   background-color: #dfe6e9;
   margin: 5px;
   border-radius: 3.5px;
-  padding-bottom: 15px;
+  padding: 25px;
 }
 
 @media screen and (max-width: 800px){

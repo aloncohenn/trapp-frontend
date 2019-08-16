@@ -11,6 +11,7 @@
 .nav-links {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.7);
+  padding: 0;
 }
 
 .main-nav li {
@@ -68,7 +69,7 @@
   }
   .nav-links {
     text-decoration: none;
-    margin-left: 40px;
+    padding-left: 40px;
   }
  
   .navbar-toggle {

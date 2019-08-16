@@ -1,5 +1,6 @@
 .segmented-control {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
 }
@@ -14,8 +15,9 @@
 }
 
 .segmented-control__label {
-  border-radius: 5px;
-  padding: 10px 25px;
+  font-size: 14px;
+  border-radius: 3.5px;
+  padding: 3px;
   display: block;
   border: 1px solid #555;
   text-align: center;

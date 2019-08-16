@@ -21,8 +21,9 @@ body {
 
 section {
   width: 50%;
+  min-width: 325px;
+  padding: 2px;
   margin: 50px auto;
-  padding: 20px;
   border-radius: 20px;
   box-shadow: #4ab19d 0 0 10px;
   text-align: center;
@@ -48,4 +49,3 @@ p {
   margin: 5px;
   display: inline-block;
 }
-

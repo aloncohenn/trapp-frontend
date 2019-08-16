@@ -6,6 +6,7 @@ import CompanyList from '../CompanyList/CompanyList';
 const CompanySearch = props => {
   const [value, setValue] = useState('');
   const [list, setList] = useState([]);
+  const [company, setCompany] = useState('');
 
   useEffect(() => {
     if (value) {
@@ -29,6 +30,10 @@ const CompanySearch = props => {
       });
   };
 
+  const selectCompany = (e) => {
+    setCompany(e.target.value)
+  }
+  
   const handleChange = e => {
     setValue(e.target.value);
   };
@@ -41,9 +46,11 @@ const CompanySearch = props => {
         name="company_name"
         id="company_name"
         placeholder="Apple"
+        key={`company_name:${company || company}`}
+        defaultValue={company ? company : value}
         onChange={handleChange}
       />
-      <CompanyList companies={list} />
+      <CompanyList companies={list} selectCompany={selectCompany} getLogo={props.getLogo} />
     </div>
   );
 };
