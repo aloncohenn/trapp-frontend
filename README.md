@@ -1,7 +1,7 @@
 
 # TrApp #
 
-![TrApp Logo](logo.png)
+![TrApp Logo](https://github.com/cohencodes/trapp-frontend/blob/newland/src/assets/logo.png?raw=true)
 
 TrApp tracks your applications to developer jobs, allowing you to focus on the job search.
 
@@ -9,10 +9,10 @@ TrApp tracks your applications to developer jobs, allowing you to focus on the j
 
 ### Repository:  https://github.com/cohencodes/trapp-frontend
 
-![Add Job Demo](landing.gif)
+![Add Job Demo](https://github.com/cohencodes/trapp-frontend/blob/newland/src/assets/landing.gif?raw=true width=400)
 Landing Page
 
-![Dashboard Screenshot](trapp.png)
+![Dashboard Screenshot](https://github.com/cohencodes/trapp-frontend/blob/newland/src/assets/trapp.png?raw=true  width=400)
 Add Job Demo
   
 ## Technologies 
