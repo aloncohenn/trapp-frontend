@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import config from '../../config';
 import JobApiService from '../../services/JobApiService'
+import './Study.css'
 
 const Study = (props) => {
   const job_id = props.match.params.id;
-  const [error, setError] = useState(null);
   const [job, setJob] = useState({});
   const [videos, setVideos] = useState([]);
 
@@ -51,7 +51,7 @@ const Study = (props) => {
     }
 
     return techStack.map(tech => {
-      return <button onClick={() => getYouTubeResults(`${tech} study`)}>Search {tech}</button> 
+      return <button onClick={() => getYouTubeResults(`${tech} study`)}>Study {tech}</button> 
     })
   }
 
@@ -67,7 +67,7 @@ const Study = (props) => {
         return (
           <li>
             <h3><a href={`https://www.youtube.com/watch?v=${video.id.videoId}`} >{video.snippet.title}</a></h3>
-            <img src={video.snippet.thumbnails.default.url} />
+            <img src={video.snippet.thumbnails.default.url} alt={`${video.snippet.title} YouTube`} />
             <p>{video.snippet.description}</p>
           </li>
         )
