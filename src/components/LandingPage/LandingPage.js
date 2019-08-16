@@ -1,35 +1,34 @@
 import React from 'react';
 import './LandingPage.css';
+import gif from '../../assets/landing1.gif';
+import screenshot from '../../assets/trapp1.png'
+ 
 
 const LandingPage = () => {
   return (
     <>
       <header role="banner" id="header">
-        <h2>In the TrApp house? We will help you get out </h2>
+        <h1>In the TrApp house? We will help you get out </h1>
       </header>
 
       <main role="main">
+    
         <div className="landing">
-          <img
-            src="https://via.placeholder.com/200.png?text=screenshot1"
-            alt="organzed columns"
-          />
+        <img src={gif} alt="TrApp demo animation" />
 
-          <p>
-            You focus on applying, we’ll take care of organizing your search.
-          </p>
+          <h3>
+            You focus on applying, we’ll take care of organizing your search
+          </h3>
         </div>
 
         <div className="landing">
-          <p>
-            Oversee your metrics and analyze what’s working, and what’s not.
-          </p>
+          <h3>
+            Keep track of your tasks for each of your job applications
+          </h3>
 
-          <img
-            src="https://via.placeholder.com/200.png?text=screenshot2"
-            alt="metrics"
-          />
+          <img src={screenshot} alt="TrApp screenshot" />
         </div>
+        
       </main>
     </>
   );

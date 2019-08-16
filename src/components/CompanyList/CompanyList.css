@@ -1,3 +1,36 @@
-.company_list {
-  display: flex;
+.company {
+ display: flex;
 }
+
+.company div, label {
+  flex: 1
+}
+
+[type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+[type=radio] + img {
+  cursor: pointer;
+}
+
+
+[type=radio]:checked + img {
+  border: 2px solid #efc958;
+
+}
+
+
+.company img {
+width: 40px;
+height: 40px;
+border-radius: 50%
+}
+
+
+
+
+
