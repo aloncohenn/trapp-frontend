@@ -45,34 +45,47 @@ const Study = (props) => {
 
   const generateButtons = (techStack) => {
     if (techStack.length === 0) {
-      return <p>No tech added to this job. <Link to={`/edit/${job_id}`}>Edit to add some?</Link></p>
+      return <div>
+        <p>No tech added to this job. </p>
+        <Link to={`/edit/${job_id}`}>Edit to add some?</Link>
+      </div>
     }
 
-    return techStack.map((tech, idx) => {
-      return <button onClick={() => getYouTubeResults(`${tech} study`)} key={idx}>Study {tech}</button> 
-    })
+    return (
+      <>
+      <div className="study-buttons" >
+        {techStack.map((tech, idx) => {
+          return <button onClick={() => getYouTubeResults(`${tech} study dev`)} key={idx} className="study-button">Study {tech}</button> 
+        })}
+        <Link to={`/edit/${job._id}`} className="study-button link">Edit Job</Link>
+      </div>
+      </>
+    )
   }
 
   return (
-  <>
-    {(job.techStack) 
-    ? generateButtons(job.techStack)
-    : <p>Loading...</p>}
+  <section className="study">
+    <h1>{job.companyName}</h1>
+    <h2>{job.position}</h2>
+    <div>
+      {(job.techStack) 
+      ? generateButtons(job.techStack)
+      : <p>Loading...</p>}
+    </div>
 
-    <ul>
+    <ul className="youtube-list">
       {videos
       ? videos.map(video => {
         return (
-          <li>
+          <li className="youtube-video" key={video.id.videoId}>
             <h3><a href={`https://www.youtube.com/watch?v=${video.id.videoId}`} >{video.snippet.title}</a></h3>
             <img src={video.snippet.thumbnails.default.url} alt={`${video.snippet.title} YouTube`} />
-            <p>{video.snippet.description}</p>
           </li>
         )
       })
       : <p>Click a button to get videos</p>}
     </ul>
-  </>
+  </section>
   )
 }
 

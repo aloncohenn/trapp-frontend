@@ -38,7 +38,6 @@ const JobApiService = {
   },
 
   postJob(job) {
-    console.log(job);
     return axios({
       method: 'post',
       url: `${config.API_ENDPOINT}/jobs/newjob`,
