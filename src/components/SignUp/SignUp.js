@@ -13,13 +13,11 @@ const SignUp = () => {
   );
 
   function signupUser() {
-    console.log(values);
     AuthApiService.postUser({ ...values }).then(res => {
       if (res.error) {
         setError(res.error);
         return;
       }
-      console.log(res);
     });
   }
 

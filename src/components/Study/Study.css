@@ -1,0 +1,52 @@
+.study {
+  max-width: 800px;
+  width: 100%;
+}
+
+.study h2 {
+  margin-bottom: 15px;
+}
+
+.study div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.study-button {
+  margin-top: 5px;
+  margin-left: 5px;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  background-color: #4ab19d;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+
+.study-buttons .link {
+  margin-bottom: 5px;
+  background-color: #344e5c;
+}
+
+.study-button:hover {
+  background-color: #344e5c;
+  color: #efc958;
+}
+
+.youtube-list {
+  margin: 25px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.youtube-video {
+  padding: 0;
+  list-style: none;
+  width: 175px;
+  height: 200px;
+  margin: 25px 10px;
+}
