@@ -9,10 +9,10 @@ TrApp tracks your applications to developer jobs, allowing you to focus on the j
 
 ### Repository:  https://github.com/cohencodes/trapp-frontend
 
-![Add Job Demo](https://github.com/cohencodes/trapp-frontend/blob/newland/src/assets/landing.gif?raw=true =400)
+![Add Job Demo](https://github.com/cohencodes/trapp-frontend/blob/newland/src/assets/landing.gif?raw=true =400x)
 Landing Page
 
-![Dashboard Screenshot](https://github.com/cohencodes/trapp-frontend/blob/newland/src/assets/trapp.png?raw=true =400)
+![Dashboard Screenshot](https://github.com/cohencodes/trapp-frontend/blob/newland/src/assets/trapp.png?raw=true =400x)
 Add Job Demo
   
 ## Technologies 
