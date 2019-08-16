@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { JobContext } from '../../contexts/JobContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './JobCard.css';
-import Company from '../Company/Company'
 
 
 

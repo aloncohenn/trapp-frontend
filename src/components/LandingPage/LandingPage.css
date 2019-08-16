@@ -1,3 +1,7 @@
+h1 {
+  padding: 5px;
+  text-align: center;
+}
 
 
 h2 {
@@ -7,8 +11,11 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  color: #4ab19d
+}
+
 .landing, .dashboard {
-	background: var(--bg-light);
 	margin: auto 20px;
 	text-align: center;
   padding: 15px;
@@ -16,6 +23,8 @@ h2 {
   justify-content: center; 
   align-items: center; 
 }
+
+
 
 .signup {
   justify-content: center; 
@@ -28,43 +37,37 @@ form {
     padding-bottom: 20px;
 }
 
-button, img, p {
+button, p {
     padding: 5px;
     margin: 5px;
     display: inline-block;
 }
 
-
-
-
-
-/* 
+.landing img {
+  border-radius: 10px;
+  box-shadow: #efc958 0 0 3px;
+  width: 50%;
+  height: auto;
+  margin: 15px;
+  padding: 3px
+}
 
 main {
-  display: flex;
+  width: 600px
 }
 
-h1 {
-  flex: 1;
-}
 
-p {
-  flex: 2;
-}
-
-.second h1 {
-  order: 2;
-}
-
-.second p {
-  order: 1;
-}
 
 @media screen and (max-width: 700px){
-  main {
+  .landing
+   {
     flex-direction: column;
   }
-  .second h1 {
-    order: 1;
-  }
-} */
+
+  main {
+  width: 100%
+}
+ 
+}
+
+

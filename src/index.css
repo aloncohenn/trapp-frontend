@@ -17,12 +17,6 @@ html {
   background-color: var(--bg-light);
 }
 
-:root {
-  --bg-dark: #aaa; /* navsbg, footerbg, minor text */
-  --bg-light: rgb(247, 246, 250); /* contrast */
-  --text-light: #ddd; /* whitespace */
-  --text-dark: #444; /* h1 main text */
-}
 
 body {
   margin: 0;
@@ -37,6 +31,7 @@ section {
   border-radius: 20px;
   box-shadow: #4ab19d 0 0 10px;
   text-align: center;
+  vertical-align: middle;
 }
 
 
