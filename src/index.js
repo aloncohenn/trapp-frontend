@@ -15,7 +15,8 @@ import {
   faBars,
   faTrashAlt,
   faSquare,
-  faCheckSquare
+  faCheckSquare,
+  faBook
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -27,7 +28,8 @@ library.add(
   faBars,
   faTrashAlt,
   faSquare,
-  faCheckSquare
+  faCheckSquare,
+  faBook
 );
 
 ReactDOM.render(

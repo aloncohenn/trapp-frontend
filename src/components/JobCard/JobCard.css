@@ -1,11 +1,13 @@
 .job-card {
- border-radius: 10px;
-  box-shadow: #4ab19d 0 0 3px;
+  border-radius: 3.5px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
   margin: 10px;
   min-height: 150px;
+  background-color: rgb(250, 250, 250);
+  list-style: none;
 }
 
-.dashboardButton {
+.dashboard-button {
   background: none;
   border: none;
   padding: 0;
@@ -14,23 +16,12 @@
   outline: inherit;
 }
 
-p {
-  display: block
+.dashboard-button:hover {
+  color: #efc958;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  color: #344e5c;
+.company-title {
+  display: block;
 }
 
-.dashboardButton:hover {
-  color: #efc958
-}
-
-
-
-h2{   text-shadow:  
-      1px -1px 0 #efc958 }
 
