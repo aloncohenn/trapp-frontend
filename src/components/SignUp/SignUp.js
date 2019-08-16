@@ -14,10 +14,20 @@ const SignUp = () => {
 
   function signupUser() {
     AuthApiService.postUser({ ...values }).then(res => {
+      setError('')
       if (res.error) {
-        setError(res.error);
-        return;
+        if (res.error.email) {
+          setError(`email ${res.error.email.message}`)
+          return;
+        }
+        if (res.error.username) {
+          setError(`email ${res.error.username.message}`)
+          return;
+        }
       }
+
+      setError('Signed up!')
+      return;
     });
   }
 
@@ -74,7 +84,7 @@ const SignUp = () => {
             required
           />
         </div>
-        <button type="submit" class="signupButton">Log In</button>
+        <button type="submit" className="signupButton">Log In</button>
       </form>
     </section>
   );
