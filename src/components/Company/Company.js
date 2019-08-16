@@ -1,13 +1,15 @@
 import React from 'react';
+import './Company.css'
 
 const Company = ({ name, logo }) => {
-  return (
-    <div>
-      <input type="radio" name="company" value={name} />
-      <p>{name}</p>
-      <img src={logo} alt={`${name} logo`} />
-    </div>
-  );
-};
+  return <label> <div className="company_select">
+  <input type="radio" name="company" value={name} />
+   
+   <img src={logo} alt={`${name} logo`} />
+     {name}
+   
+     </div>
+    </label>
+}
 
 export default Company;

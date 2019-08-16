@@ -43,22 +43,6 @@
   cursor: pointer;
 }
 
-p {
-  color: #344e5c;
-  font-weight: bold;
-}
-
-.company_list img {
-  width: 7%;
-  height: 7%;
-  border-radius: 50%;
-  vertical-align: middle;
-}
-
-.post-job-form {
-  text-align: center;
-}
-
 .addFormButton:hover {
   background-color: #344e5c;
   color: #efc958;
