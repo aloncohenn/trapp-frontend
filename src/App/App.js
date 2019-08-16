@@ -9,25 +9,28 @@ import SignUp from '../components/SignUp/SignUp';
 import LandingPage from '../components/LandingPage/LandingPage';
 import Dashboard from '../components/Dashboard/Dashboard';
 import JobForm from '../components/JobForm/JobForm';
-import EditJob from '../components/EditJob/EditJob'
+import EditJob from '../components/EditJob/EditJob';
 import Footer from '../components/Footer/Footer';
 import JobContextProvider from '../contexts/JobContext';
+import ThemeContextProvider from '../contexts/ThemeContext';
 
 const App = () => {
   return (
     <div className="App">
       <UserContextProvider>
         <JobContextProvider>
-          <Navbar />
-          <Switch>
-            <PublicRoute exact path="/" component={LandingPage} />
-            <PublicRoute path="/signup" component={SignUp} />
-            <PublicRoute exact path="/login" component={Login} />
-            <PrivateRoute path="/dashboard" component={Dashboard} />
-            <PrivateRoute path="/newjob" component={JobForm} />
-            <PrivateRoute path="/edit/:id" component={EditJob} />
-          </Switch>
-          <Footer />
+          <ThemeContextProvider>
+            <Navbar />
+            <Switch>
+              <PublicRoute exact path="/" component={LandingPage} />
+              <PublicRoute path="/signup" component={SignUp} />
+              <PublicRoute exact path="/login" component={Login} />
+              <PrivateRoute path="/dashboard" component={Dashboard} />
+              <PrivateRoute path="/newjob" component={JobForm} />
+              <PrivateRoute path="/edit/:id" component={EditJob} />
+            </Switch>
+            <Footer />
+          </ThemeContextProvider>
         </JobContextProvider>
       </UserContextProvider>
     </div>

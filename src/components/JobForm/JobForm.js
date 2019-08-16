@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react';
 import Emoji from '../Emoji/Emoji';
-import './JobForm.css';
 import { JobContext } from '../../contexts/JobContext';
 import { techStackArray, SegmentControl } from '../../utils/Helpers';
-import CompanySearch from '../CompanySearch/CompanySearch'
+import CompanySearch from '../CompanySearch/CompanySearch';
+import './JobForm.css';
 
 const JobForm = props => {
   const [error, setError] = useState(null);
@@ -15,8 +15,16 @@ const JobForm = props => {
 
   const handleSubmitJob = e => {
     e.preventDefault();
-    const { company_name, position, category, tech_stack, date_applied, job_posting, notes } = e.target;
-    const stack = techStackArray(tech_stack.value)
+    const {
+      company_name,
+      position,
+      category,
+      tech_stack,
+      date_applied,
+      job_posting,
+      notes
+    } = e.target;
+    const stack = techStackArray(tech_stack.value);
     return setError(
       addJob(
         {
@@ -93,7 +101,9 @@ const JobForm = props => {
             size="40"
           />
         </div>
-        <button className="addFormButton" type="submit">Submit</button>
+        <button className="addFormButton" type="submit">
+          Submit
+        </button>
       </form>
     </section>
   );

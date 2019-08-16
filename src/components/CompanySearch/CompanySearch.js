@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios'
-import CompanyList from '../CompanyList/CompanyList'
+import axios from 'axios';
+import CompanyList from '../CompanyList/CompanyList';
+// import './CompanySearch.css';
 
-const CompanySearch = (props) => {
+const CompanySearch = props => {
   const [value, setValue] = useState('');
   const [list, setList] = useState([]);
 
   useEffect(() => {
     if (value) {
-      getClearbit(value)
+      getClearbit(value);
     } else {
       setList([]);
     }
-  }, [value])
+  }, [value]);
 
-  const getClearbit = (val) => {
+  const getClearbit = val => {
     return axios({
       method: 'get',
-      url: `https://autocomplete.clearbit.com/v1/companies/suggest?query=${val}`,
+      url: `https://autocomplete.clearbit.com/v1/companies/suggest?query=${val}`
     })
       .then(res => {
         setList(res.data);
@@ -26,16 +27,15 @@ const CompanySearch = (props) => {
       .catch(error => {
         return error.response.data;
       });
-  }
+  };
 
-  const handleChange = (e) => {
-    setValue(e.target.value)
-  }
-
+  const handleChange = e => {
+    setValue(e.target.value);
+  };
 
   return (
-    <div>
-      <label htmlFor="company_name" className="company_name">Company</label>
+    <div className="company_list">
+      <label htmlFor="company_name">Company</label>
       <input
         type="text"
         name="company_name"
@@ -45,7 +45,7 @@ const CompanySearch = (props) => {
       />
       <CompanyList companies={list} />
     </div>
-  )
-}
+  );
+};
 
-export default CompanySearch
+export default CompanySearch;
