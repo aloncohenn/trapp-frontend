@@ -1,5 +1,6 @@
 .segmented-control {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
 }
@@ -14,29 +15,29 @@
 }
 
 .segmented-control__label {
-  border-radius: 5px;
-  padding: 10px 25px;
+  font-size: 14px;
+  border-radius: 3.5px;
+  padding: 3px;
   display: block;
   border: 1px solid #555;
-  text-align: center;  
+  text-align: center;
+  cursor: pointer;
 }
 
 .segmented-control__label:hover {
   opacity: 50%;
   background: #344e5c;
-  color: #efc958; 
+  color: #efc958;
 }
 
 .segmented-control__input:focus + .segmented-control__label {
   outline: 1px solid #4ab19d;
 }
 
-
 .segmented-control__input:checked + .segmented-control__label {
   background: #4ab19d;
-  color: #fff; 
+  color: #fff;
 }
-
 
 .addFormButton {
   padding: 8px;
@@ -47,4 +48,15 @@
 .addFormButton:hover {
   background-color: #344e5c;
   color: #efc958;
+}
+
+.post-job-form button {
+  margin-top: 5px;
+  margin-left: 5px;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  background-color: #4ab19d;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
 }

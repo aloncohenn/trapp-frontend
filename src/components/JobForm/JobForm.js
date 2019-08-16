@@ -1,13 +1,14 @@
 import React, { useState, useContext } from 'react';
 import Emoji from '../Emoji/Emoji';
-import './JobForm.css';
 import { JobContext } from '../../contexts/JobContext';
 import { techStackArray, SegmentControl } from '../../utils/Helpers';
-import CompanySearch from '../CompanySearch/CompanySearch'
+import CompanySearch from '../CompanySearch/CompanySearch';
+import './JobForm.css';
 
 const JobForm = props => {
   const [error, setError] = useState(null);
   const { addJob, getNow } = useContext(JobContext);
+  const [logo, setLogo] = useState('');
 
   const redirect = () => {
     props.history.replace('/dashboard');
@@ -15,8 +16,15 @@ const JobForm = props => {
 
   const handleSubmitJob = e => {
     e.preventDefault();
-    const { company_name, position, category, tech_stack, date_applied, job_posting, notes } = e.target;
-    const stack = techStackArray(tech_stack.value)
+    const {
+      company_name,
+      position,
+      category,
+      tech_stack,
+      date_applied,
+      job_posting,
+    } = e.target;
+    const stack = techStackArray(tech_stack.value);
     return setError(
       addJob(
         {
@@ -26,12 +34,16 @@ const JobForm = props => {
           category: category.value,
           techStack: stack,
           date_applied: date_applied.value,
-          notes: notes.value
+          logo
         },
         redirect
       )
     );
   };
+
+  const getLogo = (logo) => {
+    setLogo(logo);
+  }
 
   return (
     <section>
@@ -45,7 +57,7 @@ const JobForm = props => {
           )}
         </div>{' '}
         <SegmentControl />
-        <CompanySearch />
+        <CompanySearch getLogo={getLogo} />
         <div>
           <label htmlFor="job_posting">Job Posting</label>
           <input
@@ -83,17 +95,9 @@ const JobForm = props => {
             placeholder="React, Node, Angular, etc."
           />
         </div>
-        <div>
-          <label htmlFor="notes">Notes</label>
-          <input
-            type="textarea"
-            name="notes"
-            id="notes"
-            placeholder="Notes about this position"
-            size="40"
-          />
-        </div>
-        <button className="addFormButton" type="submit">Submit</button>
+        <button className="addFormButton" type="submit">
+          Submit
+        </button>
       </form>
     </section>
   );

@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './Navbar.css';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../contexts/UserContext';
-import logo from '../../assets/logo.png'
+import './Navbar.css';
+
  
 
 
@@ -22,11 +22,7 @@ const Navbar = () => {
           <FontAwesomeIcon icon="bars" color="white" size="lg" />
         </span>
         <Link to="/">
-          <img
-            className="logo"
-            src={logo}
-            alt="company logo"
-          />
+          <h1>TrApp</h1>
         </Link>
         <ul className="main-nav" id={active ? 'active' : null}>
           <li>
@@ -54,12 +50,8 @@ const Navbar = () => {
         >
           <FontAwesomeIcon icon="bars" color="white" size="lg" />
         </span>
-        <Link to="/">
-          <img
-            className="logo"
-            src={logo}
-            alt="company logo"
-          />
+        <Link className="nav-logo" to="/">
+          <h1>TrApp</h1>
         </Link>
         <ul className="main-nav" id={active ? 'active' : null}>
           <li>

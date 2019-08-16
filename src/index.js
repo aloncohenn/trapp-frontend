@@ -6,7 +6,6 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
-
 import {
   faEdit,
   faPlus,
@@ -15,11 +14,23 @@ import {
   faUser,
   faBars,
   faTrashAlt,
-
+  faSquare,
+  faCheckSquare,
+  faBook
 } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faKey, faEnvelope, faUser, faEdit, faPlus, faBars, faTrashAlt);
-
+library.add(
+  faKey,
+  faEnvelope,
+  faUser,
+  faEdit,
+  faPlus,
+  faBars,
+  faTrashAlt,
+  faSquare,
+  faCheckSquare,
+  faBook
+);
 
 ReactDOM.render(
   <BrowserRouter>

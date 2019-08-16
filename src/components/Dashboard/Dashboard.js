@@ -1,21 +1,17 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { JobContext } from '../../contexts/JobContext';
-import './Dashboard.css';
 import JobCard from '../JobCard/JobCard';
+import './Dashboard.css';
 
-const Dashboard = (props) => {
-  const { jobs, getJobs } = useContext(JobContext);
-
-  useEffect(() => {
-    getJobs();
-  })
+const Dashboard = props => {
+  const { jobs } = useContext(JobContext);
 
   let columns = ['Wishlist', 'Applied', 'Interview', 'Offer', 'Rejected'];
 
   let jobList = columns.map(column => {
     return (
-      <ul key={column}>
-        <h1>{column}</h1>
+      <ul key={column} className="job-column">
+        <h1 className="column-title">{column}</h1>
         {jobs
           .filter(job => job.category.toLowerCase() === column.toLowerCase())
           .map(job => {
@@ -25,10 +21,9 @@ const Dashboard = (props) => {
                 position={job.position}
                 category={job.category}
                 dateApplied={job.dateApplied}
+                logo={job.logo}
                 id={job._id}
                 key={job._id}
-                logo={job.logo}
-
                 {...props}
               />
             );
