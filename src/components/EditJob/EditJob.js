@@ -41,7 +41,7 @@ const EditJob = props => {
         position: position.value,
         category: category.value,
         dateApplied: date_applied.value,
-        techStack: tech_stack.value.split(',').filter(job => job !== ''),
+        techStack: tech_stack.value.split(',').filter(job => job !== '')
       })
     );
     setSuccess(true);
@@ -127,10 +127,18 @@ const EditJob = props => {
           </div>
         </>
       ) : (
-          <p>Loading...</p>
-        )}
+        <p>Loading...</p>
+      )}
     </section>
   );
+};
+
+EditJob.defaultProps = {
+  match: {
+    params: {
+      id: ''
+    }
+  }
 };
 
 export default EditJob;

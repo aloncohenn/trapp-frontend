@@ -9,25 +9,31 @@ const JobCard = props => {
   const redirectToStudy = () => {
     props.history.replace(`/study/${props.id}`);
   };
-  
+
   const redirectToEdit = () => {
     props.history.replace(`/edit/${props.id}`);
   };
 
   return (
-    <li className="job-card" tabindex="0">  
+    <li className="job-card" tabIndex="0">
       <img src={props.logo} alt={props.companyName} />
       <div className="job-content">
         <h2>{props.companyName}</h2>
-        <p className="company-title">  {props.position}   </p>
+        <p className="company-title"> {props.position} </p>
         <div>
-          <button onClick={() => redirectToStudy()} className="dashboard-button">
+          <button
+            onClick={() => redirectToStudy()}
+            className="dashboard-button"
+          >
             <FontAwesomeIcon icon="book" size="2x" />
           </button>
           <button onClick={() => redirectToEdit()} className="dashboard-button">
             <FontAwesomeIcon icon="edit" size="2x" />
           </button>
-          <button onClick={() => deleteJob(props.id)} className="dashboard-button">
+          <button
+            onClick={() => deleteJob(props.id)}
+            className="dashboard-button"
+          >
             <FontAwesomeIcon icon="trash-alt" size="2x" />
           </button>
         </div>
