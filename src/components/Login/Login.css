@@ -1,17 +1,12 @@
 
-.login-button {
-  margin: 10px;
+.loginButton {
   padding: 8px;
-  border-radius: 8px;
-  background-color: #4ab19d;
-  color: rgba(255, 255, 255, 0.9);
+  margin: 10px;
   cursor: pointer;
-  font-size: 14px;
 }
 
 
-.login-button:hover {
-  opacity: 50%;
-  background: #344e5c;
+.loginButton:hover {
+  background-color: #344e5c;
   color: #efc958;
 }

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Emoji from '../Emoji/Emoji';
 import './SignUp.css'
 
-const SignUp = (props) => {
+const SignUp = () => {
   const [error, setError] = useState('');
   const { values, handleChange, handleSubmit } = useSignUpForm(
     { username: '', email: '', password: '' },
@@ -14,19 +14,10 @@ const SignUp = (props) => {
 
   function signupUser() {
     AuthApiService.postUser({ ...values }).then(res => {
-      setError('')
       if (res.error) {
-        if (res.error.email) {
-          setError(`email ${res.error.email.message}`)
-          return;
-        }
-        if (res.error.username) {
-          setError(`username ${res.error.username.message}`)
-          return;
-        }
+        setError(res.error);
+        return;
       }
-
-      props.history.replace(`/login`);
     });
   }
 
@@ -83,7 +74,7 @@ const SignUp = (props) => {
             required
           />
         </div>
-        <button type="submit" className="signup-button">Sign Up</button>
+        <button type="submit" class="signupButton">Log In</button>
       </form>
     </section>
   );
