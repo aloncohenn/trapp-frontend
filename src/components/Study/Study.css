@@ -4,6 +4,7 @@
 }
 
 .study h2 {
+  font-size: 18px;
   margin-bottom: 15px;
 }
 
@@ -34,6 +35,10 @@
   color: #efc958;
 }
 
+.embedded-video {
+  margin-top: 20px;
+}
+
 .youtube-list {
   margin: 25px auto;
   display: flex;
@@ -43,10 +48,19 @@
   align-items: flex-start;
 }
 
-.youtube-video {
+.video-li {
+  cursor: pointer;
   padding: 0;
   list-style: none;
-  width: 175px;
-  height: 200px;
+  width: 125px;
   margin: 25px 10px;
+}
+
+.video-li:focus {
+  background-color: #dfe6e9;
+}
+
+.video-li h3 {
+  font-size: 12px;
+  padding: 0;
 }
