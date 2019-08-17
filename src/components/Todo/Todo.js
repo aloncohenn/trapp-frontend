@@ -7,7 +7,7 @@ const Todo = ({ todo, updateTodo, deleteTodo }) => {
     <div
       className="todo"
       style={{
-        textDecoration: todo.done_status ? 'line-through' : '',
+        textDecoration: todo.status ? 'line-through' : '',
         fontSize: '12px'
       }}
     >
@@ -30,6 +30,12 @@ const Todo = ({ todo, updateTodo, deleteTodo }) => {
       </div>
     </div>
   );
+};
+
+Todo.defaultProps = {
+  todo: {
+    status: false
+  }
 };
 
 export default Todo;
