@@ -2,9 +2,7 @@
 
 TrApp tracks your applications to developer jobs, allowing you to focus on the job search.
 
-### Live Demo:  https://trapp-frontend.jonespi.now.sh
-
-### Repository:  https://github.com/cohencodes/trapp-frontend
+### [Live Version](https://trapp-frontend.jonespi.now.sh)
 
 ![Add Job Demo](https://github.com/cohencodes/trapp-frontend/blob/master/src/assets/landing.gif?raw=true)
 
@@ -28,8 +26,10 @@ TrApp tracks your applications to developer jobs, allowing you to focus on the j
   * [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
   * [Authentication: JSONWebTokens](https://jwt.io/)
   * [Heroku](https://devcenter.heroku.com)
+  * [YouTube API](https://developers.google.com/youtube/v3/)
+  * [Clearbit API](https://clearbit.com/docs)
 
-[Server repo](https://github.com/cohencodes/trapp-backend/)
+[Server repo](https://github.com/cohencodes/trapp-backend)
 
 
 ## Team
