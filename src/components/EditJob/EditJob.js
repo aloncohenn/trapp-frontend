@@ -127,8 +127,8 @@ const EditJob = props => {
           </div>
         </>
       ) : (
-        <p>Loading...</p>
-      )}
+          <p>Loading...</p>
+        )}
     </section>
   );
 };

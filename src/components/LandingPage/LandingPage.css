@@ -1,5 +1,5 @@
 h1 {
-  padding: 5px;
+  padding: 20px;
   text-align: center;
 }
 
@@ -11,17 +11,16 @@ h2 {
 }
 
 h3 {
-  color: #4ab19d
+  color: #4ab19d;
+  padding: 10px;
 }
 
 .landing, .dashboard {
 	text-align: center;
-  padding: 15px;
   display: flex;
   justify-content: center; 
   align-items: center; 
 }
-
 
 
 .signup {
@@ -35,23 +34,34 @@ form {
     padding-bottom: 20px;
 }
 
-button, p {
-    padding: 5px;
-    margin: 5px;
-    display: inline-block;
-}
 
 .landing img {
   border-radius: 10px;
-  box-shadow: #efc958 0 0 3px;
-  width: 50%;
+  width: 40%;
   height: auto;
-  margin: 15px;
-  padding: 3px
+}
+
+.landingButton {
+  background-color: #4ab19d;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  margin: 20px;
+}
+
+
+.landingButton:hover {
+  background-color: #efc958;
+  color: #344e5c
 }
 
 main {
-  width: 600px
+  width: 80%
+}
+
+span {
+  margin: 40px
 }
 
 
