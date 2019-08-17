@@ -1,8 +1,4 @@
-
-
 # TrApp #
-
-![TrApp Logo](https://github.com/cohencodes/trapp-frontend/blob/newland/src/assets/logo.png?raw=true)
 
 TrApp tracks your applications to developer jobs, allowing you to focus on the job search.
 
@@ -10,30 +6,24 @@ TrApp tracks your applications to developer jobs, allowing you to focus on the j
 
 ### Repository:  https://github.com/cohencodes/trapp-frontend
 
-![Add Job Demo](https://github.com/cohencodes/trapp-frontend/blob/newland/src/assets/landing.gif?raw=true)
+![Add Job Demo](https://github.com/cohencodes/trapp-frontend/blob/master/src/assets/landing.gif?raw=true)
 
-
-![Dashboard Screenshot](https://github.com/cohencodes/trapp-frontend/blob/newland/src/assets/trapp.png?raw=true)
-
+![Dashboard Screenshot](https://github.com/cohencodes/trapp-frontend/blob/master/src/assets/trapp.png?raw=true)
   
 ## Technologies 
 
 * Frontend
   * React, React Hooks & Context API
+  * Vanilla CSS
+  * FontAwesome Library
   * Axios
+
 * Backend
   * Node.js/Express
   * MongoDB/Mongoose
-  * Atlas Cloud DNB
-
-  
-## Setup
-To run this project, install it locally using npm:
-
-```
-$ npm install
-$ npm start
-```
+  * MongoDB Atlas
+  * Authentication: JSONWebTokens
+  * Heroku
 
 ## Credits
 * [@cohencodes](https://github.com/cohencodes)

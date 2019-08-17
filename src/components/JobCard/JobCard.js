@@ -15,7 +15,7 @@ const JobCard = props => {
   };
 
   return (
-    <li className="job-card">  
+    <li className="job-card" tabindex="0">  
       <img src={props.logo} alt={props.companyName} />
       <div className="job-content">
         <h2>{props.companyName}</h2>
