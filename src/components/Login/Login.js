@@ -83,8 +83,8 @@ const Login = props => {
             placeholder="password..."
           />
         </div>
-        <button type="submit" className="loginButton">Log In</button>
-        <input type="button" className="loginButton" onClick={handleDemo} value="Demo" />
+        <button type="submit" className="login-button">Log In</button>
+        <input type="button" className="login-button" onClick={handleDemo} value="Demo" />
       </form>
     </section>
   );
