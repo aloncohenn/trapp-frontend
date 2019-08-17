@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import YouTube from 'react-youtube';
 import config from '../../config';
 import JobApiService from '../../services/JobApiService'
 import './Study.css'
@@ -8,6 +9,7 @@ import './Study.css'
 const Study = (props) => {
   const job_id = props.match.params.id;
   const [job, setJob] = useState({});
+  const [selectedVideo, setSelectedVideo] = useState('')
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
@@ -21,7 +23,7 @@ const Study = (props) => {
   const getYouTubeResults = (search) => {
     const params = {
       key: config.YOUTUBE_KEY,
-      maxResults: 6,
+      maxResults: 5,
       q: search,
       type: 'video',
       part: 'snippet'
@@ -43,6 +45,14 @@ const Study = (props) => {
       });
   }
 
+  const setVideo = (e, video) => {
+    e.preventDefault();
+    if (e.which === 32) {
+      console.log('this runs');
+      setSelectedVideo(video);
+    }
+  }
+
   const generateButtons = (techStack) => {
     if (techStack.length === 0) {
       return <div>
@@ -52,14 +62,13 @@ const Study = (props) => {
     }
 
     return (
-      <>
-      <div className="study-buttons" >
+      <div className="study-buttons">
         {techStack.map((tech, idx) => {
-          return <button onClick={() => getYouTubeResults(`${tech} study dev`)} key={idx} className="study-button">Study {tech}</button> 
+          return <button onClick={() => getYouTubeResults(`${tech} interview dev`)} key={idx} className="study-button">Study {tech}</button> 
         })}
+        <button onClick={() => getYouTubeResults(`data structures and algorithms interview dev`)}className="study-button">Study Data Structures & Algorithms</button> 
         <Link to={`/edit/${job._id}`} className="study-button link">Edit Job</Link>
       </div>
-      </>
     )
   }
 
@@ -73,17 +82,25 @@ const Study = (props) => {
       : <p>Loading...</p>}
     </div>
 
+    {selectedVideo
+      ? <YouTube 
+          videoId={selectedVideo.id.videoId}
+          className="embedded-video"
+          opts={{playerVars: {autoplay: 1}}} />
+      : ''
+    }
+
     <ul className="youtube-list">
       {videos
       ? videos.map(video => {
         return (
-          <li className="youtube-video" key={video.id.videoId}>
-            <h3><a href={`https://www.youtube.com/watch?v=${video.id.videoId}`} >{video.snippet.title}</a></h3>
+          <li className="video-li" key={video.id.videoId} onClick={() => setSelectedVideo(video)} onKeyPress={(e) => setVideo(e, video)} tabIndex="0">
             <img src={video.snippet.thumbnails.default.url} alt={`${video.snippet.title} YouTube`} />
+            <h3>{video.snippet.title}</h3>
           </li>
         )
       })
-      : <p>Click a button to get videos</p>}
+      : <p>Click a button to get videos.</p>}
     </ul>
   </section>
   )
