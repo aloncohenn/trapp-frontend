@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Emoji from '../Emoji/Emoji';
 import './SignUp.css'
 
-const SignUp = () => {
+const SignUp = (props) => {
   const [error, setError] = useState('');
   const { values, handleChange, handleSubmit } = useSignUpForm(
     { username: '', email: '', password: '' },
@@ -21,13 +21,12 @@ const SignUp = () => {
           return;
         }
         if (res.error.username) {
-          setError(`email ${res.error.username.message}`)
+          setError(`username ${res.error.username.message}`)
           return;
         }
       }
 
-      setError('Signed up!')
-      return;
+      props.history.replace(`/login`);
     });
   }
 
@@ -84,7 +83,7 @@ const SignUp = () => {
             required
           />
         </div>
-        <button type="submit" className="signupButton">Log In</button>
+        <button type="submit" className="signup-button">Sign Up</button>
       </form>
     </section>
   );
