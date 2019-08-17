@@ -37,21 +37,22 @@ form {
 
 .landing img {
   border-radius: 10px;
-  width: 40%;
+  width: 100%;
+  max-width: 500px;
   height: auto;
 }
 
-.landingButton {
+.landing-button {
+  margin: 10px;
+  padding: 12px;
+  border-radius: 8px;
   background-color: #4ab19d;
-  font-size: 20px;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   cursor: pointer;
-  padding: 10px;
-  margin: 20px;
+  font-size: 14px;
 }
 
-
-.landingButton:hover {
+.landing-button:hover {
   background-color: #efc958;
   color: #344e5c
 }
@@ -64,17 +65,23 @@ span {
   margin: 40px
 }
 
+.landing-buttons {
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
 
 
 @media screen and (max-width: 700px){
-  .landing
-   {
+  .landing {
     flex-direction: column;
   }
 
   main {
-  width: 100%
-}
+    width: 100%
+  }
  
 }
 

@@ -14,22 +14,6 @@
   position: relative;
 }
 
-.dashboard-button {
-  background: none;
-  border: none;
-  color: #4ab19d;
-  cursor: pointer;
-  outline: inherit;
-}
-
-.dashboard-button:hover {
-  color: #efc958;
-}
-
-.dashboard-button:focus {
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
-}
-
 .job-content {
   display: flex;
   flex-direction: column;
