@@ -1,8 +1,10 @@
-# TrApp #
+# TrApp
 
 TrApp tracks your applications to developer jobs, allowing you to focus on the job search.
 
-### [Live Version](https://trapp-frontend.jonespi.now.sh)
+### Live Demo: https://trapp-frontend.now.sh
+
+### Repository: https://github.com/cohencodes/trapp-frontend
 
 ![Add Job Demo](https://github.com/cohencodes/trapp-frontend/blob/master/src/assets/landing.gif?raw=true)
 
@@ -31,10 +33,40 @@ TrApp tracks your applications to developer jobs, allowing you to focus on the j
 
 [Server repo](https://github.com/cohencodes/trapp-backend)
 
+## API
+
+```
+/api
+.
+├── /auth
+│   └── POST
+│       └── /auth
+├── /jobs
+│   └── GET /
+│       ├── /
+│       └── /:jobId
+│   └── POST
+│       └── /:_id
+│   └── PATCH
+|       └── /:_id
+│   └── DELETE
+|       └── /:_id
+├── /todos
+│   └── GET
+│       ├── /:job_id
+│       └── /get_todo/:_id
+│   └── POST
+│       └── /add_todo
+│   └── PATCH
+|       └── /update_todo
+│   └── DELETE
+|       └── /delete_todo/:_id
+├── /users
+│   └── POST
+│       └── /signup
+```
 
 ## Team
 * Project Manager [@cohencodes](https://github.com/cohencodes)
 * QA Lead [@jonespi](https://github.com/jonespi)
 * Design Lead [@anyasnow](https://github.com/anyasnow)
-
-

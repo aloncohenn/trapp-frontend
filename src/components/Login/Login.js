@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Emoji from '../Emoji/Emoji';
 import { UserContext } from '../../contexts/UserContext';
 import { JobContext } from '../../contexts/JobContext';
-import './Login.css'
+import './Login.css';
 
 const Login = props => {
   const { handleLogIn } = useContext(UserContext);
@@ -83,8 +83,17 @@ const Login = props => {
             placeholder="password..."
           />
         </div>
-        <button type="submit" className="login-button">Log In</button>
-        <input type="button" className="login-button" onClick={handleDemo} value="Demo" />
+        <button type="submit" className="login-button">
+          Log In
+        </button>
+        <button
+          type="button"
+          className="login-button"
+          onClick={handleDemo}
+          value="Demo"
+        >
+          Demo
+        </button>
       </form>
     </section>
   );
