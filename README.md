@@ -9,22 +9,29 @@ TrApp tracks your applications to developer jobs, allowing you to focus on the j
 ![Add Job Demo](https://github.com/cohencodes/trapp-frontend/blob/master/src/assets/landing.gif?raw=true)
 
 ![Dashboard Screenshot](https://github.com/cohencodes/trapp-frontend/blob/master/src/assets/trapp.png?raw=true)
+  
+## Tech Stack
 
-## Technologies
+* Frontend
+  * [React](https://github.com/facebook/react)
+  * [React Hooks](https://github.com/streamich/react-use)
+  * [Context API](https://github.com/wesbos/React-Context)
+  * [Vanilla CSS](https://vanillaframework.io/)
+  * [FontAwesome Library](https://fontawesome.com/)
+  * [Axios](https://github.com/axios/axios)
 
-- Frontend
+* Backend
+  * [Node](https://github.com/nodejs/node)
+  * [Express](https://github.com/expressjs/express)
+  * [MongoDB](https://github.com/mongodb/mongo)
+  * [Mongoose](https://github.com/Automattic/mongoose)
+  * [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+  * [Authentication: JSONWebTokens](https://jwt.io/)
+  * [Heroku](https://devcenter.heroku.com)
+  * [YouTube API](https://developers.google.com/youtube/v3/)
+  * [Clearbit API](https://clearbit.com/docs)
 
-  - React, React Hooks & Context API
-  - Vanilla CSS
-  - FontAwesome Library
-  - Axios
-
-- Backend
-  - Node.js/Express
-  - MongoDB/Mongoose
-  - MongoDB Atlas
-  - Authentication: JSONWebTokens
-  - Heroku
+[Server repo](https://github.com/cohencodes/trapp-backend)
 
 ## API
 
@@ -59,8 +66,7 @@ TrApp tracks your applications to developer jobs, allowing you to focus on the j
 │       └── /signup
 ```
 
-## Credits
-
-- [@cohencodes](https://github.com/cohencodes)
-- [@jonespi](https://github.com/jonespi)
-- [@anyasnow](https://github.com/anyasnow)
+## Team
+* Project Manager [@cohencodes](https://github.com/cohencodes)
+* QA Lead [@jonespi](https://github.com/jonespi)
+* Design Lead [@anyasnow](https://github.com/anyasnow)
