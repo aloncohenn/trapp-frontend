@@ -26,6 +26,39 @@ TrApp tracks your applications to developer jobs, allowing you to focus on the j
   - Authentication: JSONWebTokens
   - Heroku
 
+## API
+
+```
+/api
+.
+├── /auth
+│   └── POST
+│       └── /auth
+├── /jobs
+│   └── GET /
+│       ├── /
+│       └── /:jobId
+│   └── POST
+│       └── /:_id
+│   └── PATCH
+|       └── /:_id
+│   └── DELETE
+|       └── /:_id
+├── /todos
+│   └── GET
+│       ├── /:job_id
+│       └── /get_todo/:_id
+│   └── POST
+│       └── /add_todo
+│   └── PATCH
+|       └── /update_todo
+│   └── DELETE
+|       └── /delete_todo/:_id
+├── /users
+│   └── POST
+│       └── /signup
+```
+
 ## Credits
 
 - [@cohencodes](https://github.com/cohencodes)
