@@ -1,26 +1,25 @@
 .company {
- display: flex;
+  display: flex;
 }
 
-.company div, label {
+.company div {
   flex: 1
 }
 
-[type=radio] { 
+[type=radio] {
   position: absolute;
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-[type=radio] + img {
+[type=radio]+img {
   cursor: pointer;
 }
 
 
-[type=radio]:checked + img {
+[type=radio]:checked+img {
   border: 2px solid #efc958;
-
 }
 
 .company img {

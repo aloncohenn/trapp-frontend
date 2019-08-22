@@ -13,3 +13,26 @@
   background: #344e5c;
   color: #efc958;
 }
+
+.input-field {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-field label {
+  margin: 8px;
+}
+
+.input-field input {
+  width: 50%;
+}
+
+.error {
+  width: 100%;
+  max-width: 500px;
+  color: red;
+}

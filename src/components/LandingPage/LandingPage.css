@@ -75,6 +75,14 @@ span {
     flex-direction: column;
   }
 
+  .tagline {
+    width: 100%;
+  }
+
+  .landing-buttons {
+    width: 100%;
+  }
+
   main {
     width: 100%;
   }

@@ -1,7 +1,6 @@
 import React, { useState, useContext } from 'react';
 import AuthApiService from '../../services/AuthApiService';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Emoji from '../Emoji/Emoji';
 import { UserContext } from '../../contexts/UserContext';
 import { JobContext } from '../../contexts/JobContext';
 import './Login.css';
@@ -54,34 +53,18 @@ const Login = props => {
     <section>
       <h1>Log In</h1>
       <form className="login-form" onSubmit={handleSubmitJwtAuth}>
-        <div role="alert">
-          {error && (
-            <p className="error">
-              {error} <Emoji symbol="😃" />
-            </p>
-          )}
-        </div>{' '}
-        <div>
+        <div role="alert">{error && <p className="error">{error}</p>}</div>{' '}
+        <div className="input-field">
           <label htmlFor="username">
             <FontAwesomeIcon icon="user" color="black" size="sm" /> Username{' '}
           </label>{' '}
-          <input
-            type="text"
-            name="username"
-            id="username"
-            placeholder="username..."
-          />
+          <input type="text" name="username" id="username" />
         </div>
-        <div>
+        <div className="input-field">
           <label htmlFor="password">
             <FontAwesomeIcon icon="key" color="black" size="sm" /> Password{' '}
           </label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="password..."
-          />
+          <input type="password" name="password" id="password" />
         </div>
         <button type="submit" className="login-button">
           Log In

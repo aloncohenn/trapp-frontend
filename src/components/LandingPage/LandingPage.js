@@ -13,7 +13,7 @@ const LandingPage = () => {
       <main role="main">
         <div className="landing">
           <img src={gif} alt="TrApp demo animation" />
-          <div>
+          <div className="tagline">
             <h3>
               You focus on applying, we’ll take care of organizing your search
             </h3>
