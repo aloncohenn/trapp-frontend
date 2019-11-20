@@ -1,7 +1,7 @@
 
 .login-button {
   margin: 10px;
-  padding: 8px;
+  padding: 12px;
   border-radius: 8px;
   background-color: #4ab19d;
   color: rgba(255, 255, 255, 0.9);
@@ -9,9 +9,7 @@
   font-size: 14px;
 }
 
-
 .login-button:hover {
-  opacity: 50%;
-  background: #344e5c;
-  color: #efc958;
+  background-color: #efc958;
+  color: #344e5c;
 }

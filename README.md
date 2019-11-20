@@ -1,6 +1,6 @@
 # TrApp
 
-TrApp tracks your applications to developer jobs, allowing you to focus on the job search.
+TrApp tracks your applications to developer jobs, allowing you to focus on the job search. Create todo lists, get curated interview prep videos for each job application, and organize where you are in the timeline of each application.
 
 ### Live Demo: https://trapp-frontend.now.sh
 
