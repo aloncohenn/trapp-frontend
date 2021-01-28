@@ -67,6 +67,6 @@ TrApp tracks your applications to developer jobs, allowing you to focus on the j
 ```
 
 ## Team
-* Project Manager [@cohencodes](https://github.com/cohencodes)
+* Project Manager [@aloncohenn](https://github.com/cohencodes)
 * QA Lead [@jonespi](https://github.com/jonespi)
 * Design Lead [@anyasnow](https://github.com/anyasnow)
